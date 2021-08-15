@@ -6,7 +6,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 export const getStaticProps = async () => {
   return {
     props: {
-      timestamp: new Date().getTime,
+      timestamp: new Date().getTime(),
     },
     revalidate: 5,
   }
