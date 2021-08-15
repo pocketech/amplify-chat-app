@@ -14,6 +14,6 @@ export const getStaticProps = async () => {
   }
 }
 const Page: NextPage<Props> = ({ current }) => {
-  return <Text>現在時刻は{current}です。</Text>
+  return <Text>現在時刻は{current}ですよ。</Text>
 }
 export default Page
