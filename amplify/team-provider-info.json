@@ -17,6 +17,9 @@
           "appId": "d25k02egcebfxl",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "amplifychatapp6f2fe5c0": {}
       }
     }
   }

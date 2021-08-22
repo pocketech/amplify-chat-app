@@ -5,5 +5,40 @@
       "type": "cicd",
       "lastPushTimeStamp": "2021-08-15T09:49:00.246Z"
     }
+  },
+  "auth": {
+    "amplifychatapp6f2fe5c0": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "loginMechanism": ["PREFERRED_USERNAME"],
+        "signupAttributes": ["EMAIL"],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": ["SMS"]
+      }
+    }
+  },
+  "api": {
+    "amplifychatapp": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authamplifychatapp6f2fe5c0"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
   }
 }

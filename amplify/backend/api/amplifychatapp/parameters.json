@@ -1,0 +1,8 @@
+{
+  "AppSyncApiName": "amplifychatapp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": ["authamplifychatapp6f2fe5c0", "Outputs.UserPoolId"]
+  }
+}
